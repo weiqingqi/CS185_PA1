@@ -2,20 +2,25 @@
 <head>
   <title>Image</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <nav class="nav_container">
-    <a class="nav_item" href="index.html">Text</a>
-    <a class="nav_item" href="image.html">Image</a>
-    <a class="nav_item" href="video.html">Video</a>
-    <a class="nav_item" href="table.html">Table</a>
-  </nav>
-  <div class="img_container">
-    <img class="img_item" src="images/image1.jpg" />
-    <img class="img_item" src="images/image2.webp" />
-    <img class="img_item" src="images/image3.jpeg" />
-    <img class="img_item" src="images/image4.jpg" />
-    <img class="img_item" src="images/image5.jpg" />
-    <img class="img_item" src="images/image6.jpg" />
+  <div class="nav navlayouts">
+        <a href="index.html" class="nav_item">Text</a>
+        <a href="image.html" class="nav_item inred">Images</a>
+        <a href="video.html" class="nav_item">Videos</a>
+        <a href="table.html" class="nav_item">Table</a>
+        <a href="email.html" class="nav_item">Email</a>
+    </div>
+
+  <div class="image_container">
+    <img class="image_item" src="images/image1.jpg" onclick="enlarge(this)"/>
+    <img class="image_item" src="images/image2.webp" onclick="enlarge(this)"/>
+    <img class="image_item" src="images/image3.jpeg" onclick="enlarge(this)"/>
+    <img class="image_item" src="images/image4.jpg" onclick="enlarge(this)"/>
+    <img class="image_item" src="images/image5.jpg" onclick="enlarge(this)"/>
+    <img class="image_item" src="images/image6.jpg" onclick="enlarge(this)"/>
   </div>
+    <button id="topbutton" onclick="backToTop()">Back to top</button>
+    <div class="overlay" id="overlay"><img class="source" id="source"></div>
 </body>
