@@ -1,46 +1,129 @@
-.nav_container {
-  background-color: black;
-  padding: 20px;
+body, html {
+	scroll-behavior: smooth;
+	margin: 0;
+}
+
+
+.nav {
+	background-color: black;
+ 	width: 100%;
+ 	height: 40px;
+ 	background: #333;
+	display: flex;
 }
 
 .nav_item {
-  color: white;
-  padding: 20px;
-  text-decoration: none;
+	color: white;
+	display: block;
+	text-decoration: none;
+	padding: 10px 24px;
+	display: inline-block;
 }
 
-.img_container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+.size {
+	max-width: 100%;
 }
 
-.img_item {
-  width: 300px;
-  height: 200px;
-  padding: 10px;
+.navlayouts {
+	display: flex;
 }
+
+.nav_item:hover {
+  background: #555;
+}
+
+.inred{
+	color: var(--accent-color);
+}
+
+:root{
+	--accent-color: red;
+}
+
+table {
+	border: solid 1px black;
+	border-collapse: collapse;
+}
+
+th, td {
+    border: solid 1px black;
+	border-collapse: collapse;
+	padding: 20px 25px;
+}
+
+img, video {
+	display: block;
+	max-width:100%;
+	height:auto;
+}
+
+.image_container {
+	display: grid;
+	grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+	padding: 10px;
+}
+
+.image_item {
+	width: 300px;
+ 	height: 200px;
+	padding: 20px;
+	text-align: center;
+}
+
 
 .vid_container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  padding: 10px;
+	display: grid;
+ 	grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+ 	padding: 10px;
 }
 
 .vid_item {
-  width: 500px;
-  height: 350px;
-  padding: 10px;
-  border: none;
+ 	width: 300px;
+ 	height: 200px;
+	object-fit: fill;
+	padding: 20px;
+ 	border: 10px;
+	position: relative;
 }
 
-table,
-th,
-td {
-  border: 1px solid #333;
-  border-collapse: collapse;
-  padding: 10px;
+
+.content {
+	margin: 50px;
 }
 
-th {
-  text-align: left;
+.overlay {
+	position: fixed;
+	display: none;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.5);
+	z-index: 2;
+	cursor: pointer;
+}
+
+.source {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	max-height: 60%;
+	max-width: 60%;
+	transform: translate(-50%,-50%);
+}
+
+#topbutton {
+	display: none;
+	position: fixed;
+	bottom: 35px;
+	right: 40px;
+	z-index: 99;
+	font-size: 18px;
+	outline: none;
+	background-color: white;
+	color: black;
+	cursor: pointer;
+	padding: 15px;
 }

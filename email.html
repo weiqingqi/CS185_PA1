@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <title>Email</title>
+</head>
+<body>
+  <nav class="nav navlayouts">
+    <a class="nav_item" href="index.html">Text</a>
+    <a class="nav_item" href="image.html">Image</a>
+    <a class="nav_item" href="video.html">Video</a>
+    <a class="nav_item" href="table.html">Table</a>
+    <a class="nav_item inred" href="email.html">Email</a>
+  </nav>
+<section class="content">
+  <form onclick="checkEmail(event)">
+    <label>Email:<br>
+      <input name="email" type="text"><br>
+    </label>
+    <span class="error"></span><br>
+    <input type="submit" value="Submit">
+  </form>
+</section>
+</body>
